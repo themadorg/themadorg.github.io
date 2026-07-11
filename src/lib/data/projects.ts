@@ -23,7 +23,10 @@ export type ProjectGroup = {
 
 export const org = {
 	name: 'TheMadOrg',
-	github: 'https://github.com/themadorg'
+	/** Public website (GitHub Pages custom domain). */
+	site: 'https://themadorg.net',
+	github: 'https://github.com/themadorg',
+	siteRepo: 'https://github.com/themadorg/themadorg.github.io'
 };
 
 export const projectGroups: ProjectGroup[] = [
