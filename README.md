@@ -26,15 +26,14 @@ Output: `build/` (fully prerendered static site).
 
 ## Deploy (GitHub Pages)
 
-This repo is **[themadorg.github.io](https://github.com/themadorg/themadorg.github.io)** — the org site at https://themadorg.github.io/.
+This repo is **[themadorg.github.io](https://github.com/themadorg/themadorg.github.io)** — public site **https://themadorg.net**.
 
 1. Repo **Settings → Pages → Source: GitHub Actions**
-2. Merge to `main` (or run **Deploy to GitHub Pages** via workflow_dispatch).
-3. Workflow: [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml) builds with Bun and publishes `build/`.
+2. **Settings → Pages → Custom domain:** `themadorg.net` (DNS per GitHub docs)
+3. Merge to `main` (or run **Deploy to GitHub Pages** via workflow_dispatch)
+4. Workflow: [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml) builds with Bun and publishes `build/`
 
-No `paths.base` is required (site is served at the domain root). Custom domain: add `static/CNAME` with the hostname.
-
-The static `build/` output also works on Cloudflare Pages if needed later (`bun install && bun run build`, output `build`).
+`static/CNAME` is set to `themadorg.net`. No `paths.base` (served at domain root).
 
 ## Content
 

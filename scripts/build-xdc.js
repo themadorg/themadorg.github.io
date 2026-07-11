@@ -36,7 +36,8 @@ const EXCLUDE_PATTERNS = [
 	/\.gz$/,
 	/robots\.txt$/,
 	/_headers$/,
-	/sitemap\.xml$/
+	/sitemap\.xml$/,
+	/^CNAME$/
 ];
 
 const LANGS = ['en', 'fa', 'es', 'ru'];
