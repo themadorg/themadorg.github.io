@@ -6,30 +6,29 @@
 	import ThemeToggle from './ThemeToggle.svelte';
 
 	const i18n = getI18n();
-
-	let scrolled = $state(false);
-
-	function onScroll() {
-		scrolled = window.scrollY > 8;
-	}
+	const mailto = $derived(`mailto:${org.email}?subject=${encodeURIComponent(i18n.t('fund_subject'))}`);
 </script>
 
-<svelte:window onscroll={onScroll} />
-
-<header class="nav" class:scrolled>
+<header class="nav">
 	<div class="inner">
-		<a href="#top" class="brand">
-			<OrgLogo size={28} class="brand-logo" alt="" />
+		<a href="#top" class="brand" aria-label={i18n.t('nav_home')}>
+			<OrgLogo size={34} alt="" class="brand-logo" />
 			<span class="name">{i18n.t('org_name')}</span>
 		</a>
 
 		<nav class="links" aria-label="Primary">
 			<a href="#projects">{i18n.t('nav_projects')}</a>
-			<a href="#principles">{i18n.t('nav_about')}</a>
+			<a href="#route">{i18n.t('nav_route')}</a>
+			<a href="#fund">{i18n.t('nav_fund')}</a>
+			<a href="#faq">{i18n.t('nav_faq')}</a>
 			<a href={org.github} target="_blank" rel="noopener noreferrer">{i18n.t('nav_github')}</a>
+		</nav>
+
+		<div class="tools">
 			<LangSwitch />
 			<ThemeToggle />
-		</nav>
+			<a class="action write" href={mailto}>{i18n.t('nav_write')}</a>
+		</div>
 	</div>
 </header>
 
@@ -38,70 +37,87 @@
 		position: sticky;
 		top: 0;
 		z-index: 40;
-		border-bottom: 1px solid transparent;
-		background: transparent;
-		backdrop-filter: none;
-		transition:
-			background 0.2s,
-			border-color 0.2s,
-			backdrop-filter 0.2s;
-	}
-
-	.nav.scrolled {
-		background: var(--color-nav-bg);
-		border-bottom-color: var(--color-border);
-		backdrop-filter: blur(12px);
+		background: var(--paper);
 	}
 
 	.inner {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
-		gap: 1rem;
-		max-width: var(--content-max);
-		margin: 0 auto;
-		padding: 0.85rem var(--section-pad-x);
+		gap: 1.5rem;
+		max-width: calc(var(--content-max) + 2 * var(--margin));
+		margin-inline: auto;
+		padding: 0.75rem var(--margin);
 	}
 
 	.brand {
 		display: inline-flex;
 		align-items: center;
 		gap: 0.6rem;
+		color: var(--ink);
 		text-decoration: none;
-		color: var(--color-text);
-		font-weight: 600;
-		letter-spacing: -0.02em;
 	}
 
 	.name {
-		font-size: 0.95rem;
-		letter-spacing: -0.02em;
+		font-family: var(--font-display);
+		font-size: var(--step-h3);
+		font-weight: 800;
+		line-height: 1;
+		text-transform: uppercase;
 	}
 
 	.links {
 		display: flex;
 		align-items: center;
-		gap: 0.35rem 0.85rem;
+		gap: 0.25rem 1.5rem;
+		margin-inline-start: auto;
 	}
 
 	.links a {
-		font-size: 0.875rem;
-		color: var(--color-text-muted);
-		text-decoration: none;
-		transition: color 0.15s;
+		color: var(--ink);
+		font-size: var(--step-small);
+		font-weight: 600;
+		text-decoration: underline;
+		text-decoration-color: transparent;
+		text-decoration-thickness: 2px;
+		text-underline-offset: 0.35em;
+		transition: text-decoration-color var(--dur-ui) var(--ease-out);
 	}
 
-	.links a:hover {
-		color: var(--color-text);
+	@media (hover: hover) and (pointer: fine) {
+		.links a:hover {
+			text-decoration-color: var(--red);
+		}
 	}
 
-	@media (max-width: 640px) {
+	.tools {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.write {
+		min-height: 2.5rem;
+		padding: 0.5rem 1rem;
+		font-size: var(--step-small);
+	}
+
+	@media (max-width: 1020px) {
+		.links {
+			display: none;
+		}
+
+		.tools {
+			margin-inline-start: auto;
+		}
+	}
+
+	@media (max-width: 480px) {
 		.name {
 			display: none;
 		}
 
-		.links > a:not([href*='github']) {
-			display: none;
+		.write {
+			padding-inline: 0.75rem;
 		}
 	}
 </style>

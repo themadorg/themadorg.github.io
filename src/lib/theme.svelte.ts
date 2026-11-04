@@ -1,42 +1,39 @@
-const STORAGE_KEY = 'madorg-light';
+const STORAGE_KEY = 'madorg-theme';
 
-function readLight(): boolean {
-	if (typeof localStorage === 'undefined') return false;
-	try {
-		return localStorage.getItem(STORAGE_KEY) === 'true';
-	} catch {
-		return false;
-	}
+export type ThemeName = 'light' | 'dark';
+
+function systemTheme(): ThemeName {
+	if (typeof matchMedia === 'undefined') return 'light';
+	return matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 }
 
-function apply(light: boolean) {
-	if (typeof document === 'undefined') return;
-	if (light) {
-		document.documentElement.dataset.light = '';
-	} else {
-		delete document.documentElement.dataset.light;
-	}
+function storedTheme(): ThemeName | null {
 	try {
-		localStorage.setItem(STORAGE_KEY, light ? 'true' : 'false');
+		const value = localStorage.getItem(STORAGE_KEY);
+		return value === 'light' || value === 'dark' ? value : null;
 	} catch {
-		/* ignore */
+		return null;
 	}
 }
 
 class Theme {
-	/** Prefer matching SSR (dark) until the client hydrates. */
-	light = $state(false);
+	/** Resolved scheme on screen. SSR assumes light until the client syncs. */
+	current = $state<ThemeName>('light');
 
-	/** Call once on the client (e.g. from ThemeToggle). */
+	/** Call once on the client: an explicit choice wins, otherwise follow the OS. */
 	syncFromStorage() {
 		if (typeof document === 'undefined') return;
-		this.light = readLight();
-		apply(this.light);
+		this.current = storedTheme() ?? systemTheme();
 	}
 
 	toggle() {
-		this.light = !this.light;
-		apply(this.light);
+		this.current = this.current === 'dark' ? 'light' : 'dark';
+		document.documentElement.dataset.theme = this.current;
+		try {
+			localStorage.setItem(STORAGE_KEY, this.current);
+		} catch {
+			/* storage blocked: the choice still applies for this visit */
+		}
 	}
 }
 

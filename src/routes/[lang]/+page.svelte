@@ -1,9 +1,13 @@
 <script lang="ts">
+	import Envelope from '$lib/components/Envelope.svelte';
+	import Faq from '$lib/components/Faq.svelte';
 	import Footer from '$lib/components/Footer.svelte';
-	import Hero from '$lib/components/Hero.svelte';
+	import Fund from '$lib/components/Fund.svelte';
+	import Install from '$lib/components/Install.svelte';
+	import Letter from '$lib/components/Letter.svelte';
 	import Nav from '$lib/components/Nav.svelte';
-	import Principles from '$lib/components/Principles.svelte';
-	import ProjectGrid from '$lib/components/ProjectGrid.svelte';
+	import Route from '$lib/components/Route.svelte';
+	import StampSheet from '$lib/components/StampSheet.svelte';
 	import { getI18n } from '$lib/i18n.svelte';
 
 	const i18n = getI18n();
@@ -14,9 +18,14 @@
 <Nav />
 
 <main id="main">
-	<Hero />
-	<ProjectGrid />
-	<Principles />
+	<Envelope />
+	<StampSheet />
+	<Letter />
+	<Route />
+	<Install />
+	<Fund />
+	<Faq />
+	<div class="end" aria-hidden="true"></div>
 </main>
 
 <Footer />
@@ -27,16 +36,18 @@
 		inset-inline-start: -9999px;
 		top: 0.75rem;
 		z-index: 100;
-		padding: 0.5rem 0.85rem;
-		border-radius: 0.4rem;
-		background: var(--color-btn-primary-bg);
-		color: var(--color-btn-primary-fg);
-		font-size: 0.875rem;
-		font-weight: 500;
+		padding: 0.6rem 1rem;
+		background: var(--red);
+		color: var(--on-red);
+		font-weight: 700;
 		text-decoration: none;
 	}
 
 	.skip:focus {
 		inset-inline-start: 0.75rem;
+	}
+
+	.end {
+		height: var(--section-gap);
 	}
 </style>
