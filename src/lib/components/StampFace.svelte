@@ -3,7 +3,7 @@
 	 * An engraved-style stamp face for projects without a screenshot: a flat
 	 * two-colour vignette (field + ink) of what the project does, framed like a
 	 * definitive stamp with its denomination (the project's language) and the
-	 * issuer line, where a country stamp would print its country. The project name is never repeated here; the stamp's h3 carries it.
+	 * issuer line, where a definitive stamp prints its issuer. The project name is never repeated here; the stamp's h3 carries it.
 	 */
 	import { org } from '$lib/data/projects';
 
@@ -136,7 +136,7 @@
 		</svg>
 	</div>
 
-	<span class="country" dir="ltr" lang="en">{org.name}</span>
+	<span class="issuer" dir="ltr" lang="en">{org.name}</span>
 </div>
 
 <style>
@@ -163,7 +163,7 @@
 	}
 
 	.value,
-	.country {
+	.issuer {
 		font-family: var(--font-display);
 		font-weight: 800;
 		line-height: 0.85;
@@ -176,7 +176,7 @@
 		font-size: clamp(1.25rem, 11cqi, 2.5rem);
 	}
 
-	.country {
+	.issuer {
 		justify-self: center;
 		font-size: clamp(0.8125rem, 5.5cqi, 1.125rem);
 		letter-spacing: 0.24em;

@@ -49,6 +49,7 @@
 	/* Each answer is a filing card: paper in both themes. */
 	details {
 		color-scheme: light;
+		--red: var(--sheet-red);
 		background: var(--sheet-2);
 		color: var(--ink);
 	}
@@ -73,6 +74,12 @@
 		padding: 1.25rem clamp(1.25rem, 2.5vw, 1.75rem);
 		cursor: pointer;
 		list-style: none;
+	}
+
+	/* The ring sits on the card, not out on the desk: on the dark desk the
+	   card's own blue focus colour would barely show against near-black. */
+	summary:focus-visible {
+		outline-offset: -6px;
 	}
 
 	summary::-webkit-details-marker {

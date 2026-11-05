@@ -240,9 +240,11 @@
 		line-height: 1.3;
 	}
 
+	/* Licence and language boxes never shrink below their token, so a long
+	   SPDX id (AGPL-3.0-or-later) takes room from the docs box, not the rule. */
 	.facts {
 		display: grid;
-		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.4fr);
+		grid-template-columns: minmax(max-content, 1fr) minmax(max-content, 1fr) minmax(0, 1.4fr);
 	}
 
 	.box {
@@ -413,7 +415,7 @@
 
 	@media (max-width: 480px) {
 		.facts {
-			grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+			grid-template-columns: minmax(max-content, 1fr) minmax(max-content, 1fr);
 		}
 
 		/* Give the command every column the phone has: the write-in field runs

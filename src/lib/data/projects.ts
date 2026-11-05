@@ -48,7 +48,7 @@ export const projectGroups: ProjectGroup[] = [
 				name: 'Madmail',
 				blurbKey: 'project_madmail_blurb',
 				language: 'Rust',
-				license: 'AGPL-3.0',
+				license: 'AGPL-3.0-or-later',
 				status: 'stable',
 				href: 'https://madmail.chat',
 				repo: 'https://github.com/themadorg/madmail',

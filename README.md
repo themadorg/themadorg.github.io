@@ -43,7 +43,7 @@ This repo is **[themadorg.github.io](https://github.com/themadorg/themadorg.gith
 
 Project catalog lives in [`src/lib/data/projects.ts`](src/lib/data/projects.ts): projects, roles, FAQ and install commands. Edit there to add or update stamps — no CMS or runtime GitHub API. A new stamp also needs a place on the sheet: the `plate` list in [`src/lib/components/StampSheet.svelte`](src/lib/components/StampSheet.svelte) and its grid areas.
 
-Projects with a live site (Madmail, Bedrud, Madmail Admin, Delta Chat Wiki) carry a screenshot of that site, in `static/stamps/*.webp`, each with a `.webp.json` sidecar recording where it came from. The other stamps carry an engraved two-colour vignette drawn in [`src/lib/components/StampFace.svelte`](src/lib/components/StampFace.svelte).
+Projects with a live site (Madmail, Bedrud, Madmail Admin, Delta Chat Wiki) carry a screenshot of that site, in `static/stamps/*.webp`. Each has a `.webp.json` sidecar in `provenance/stamps/` recording where it came from; the sidecars live outside `static/` so they are not published. The other stamps carry an engraved two-colour vignette drawn in [`src/lib/components/StampFace.svelte`](src/lib/components/StampFace.svelte).
 
 ## Search, answer engines and LLMs (SEO / AEO / GEO)
 

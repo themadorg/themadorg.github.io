@@ -10,6 +10,12 @@
 
 	let active = $state<Role>('funders');
 	const current = $derived(roles.find((r) => r.id === active) ?? roles[0]);
+	/** The funding subject line follows the page language, as in Nav and Fund. */
+	const actionHref = $derived(
+		current.id === 'funders'
+			? `mailto:${org.email}?subject=${encodeURIComponent(i18n.t('fund_subject'))}`
+			: current.actionHref
+	);
 
 	/**
 	 * The cancellation names the org and what it ships. It is always struck in
@@ -105,7 +111,7 @@
 							<div class="panel-inner" in:readdress>
 								<p class="line">{i18n.t(current.lineKey)}</p>
 								<div class="actions">
-									<a class="action" href={current.actionHref}>
+									<a class="action" href={actionHref}>
 										{i18n.t(current.actionKey)}
 										<svg class="arrow" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
 											<path

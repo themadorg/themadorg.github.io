@@ -47,7 +47,7 @@ Private communication you can run yourself, shipped as single binaries that smal
 
 - Real projects, real live sites, real repos, real licenses (above).
 - Madmail install is a real one-binary flow (`madmail install --simple`), documented in its README.
-- Stamp screenshots of the projects' own live sites: `static/stamps/{madmail,bedrud,madmail-admin,deltachat-wiki}.webp`, each with a `.webp.json` sidecar recording its origin. Projects without a live site get a drawn vignette (`StampFace.svelte`), never a fabricated screenshot.
+- Stamp screenshots of the projects' own live sites: `static/stamps/{madmail,bedrud,madmail-admin,deltachat-wiki}.webp`, each with a `.webp.json` sidecar in `provenance/stamps/` (outside `static/`, so unpublished) recording its origin. Projects without a live site get a drawn vignette (`StampFace.svelte`), never a fabricated screenshot.
 - Absent and never to be fabricated: testimonials, user counts, funders, partners, press, benchmarks, deployment numbers.
 
 ## Product Principles

@@ -3,7 +3,7 @@
 	"tagline": "Nos importa la comunicación",
 	"pitch": "Infraestructura de código abierto para mensajería privada y reuniones autohospedadas: relés chatmail, video y herramientas en torno al ecosistema Delta Chat.",
 	"meta_title": "TheMadOrg: infraestructura de código abierto para la comunicación privada",
-	"meta_description": "TheMadOrg crea infraestructura de comunicación de código abierto y autohospedada: relés chatmail Madmail para Delta Chat, videollamadas con Bedrud, SDK, herramientas de administración y documentación.",
+	"meta_description": "TheMadOrg crea infraestructura de comunicación de código abierto y autohospedada: relés chatmail Madmail para Delta Chat, videollamadas con Bedrud, SDK y guías.",
 	"skip_to_content": "Saltar al contenido",
 
 	"nav_projects": "Proyectos",
@@ -150,7 +150,7 @@
 	"footer_org": "Organización",
 	"footer_languages": "Idiomas",
 	"footer_note": "© {year} TheMadOrg. Las licencias de los proyectos varían (AGPL / GPL / LGPL).",
-	"footer_screens": "Las imágenes de los sellos son capturas de pantalla del propio sitio de cada proyecto.",
+	"footer_screens": "Unos sellos llevan una captura del propio sitio de cada proyecto; los grabados muestran lo que hace el proyecto.",
 	"footer_top": "Volver arriba",
 
 	"notfound_title": "Devuelto al remitente",
