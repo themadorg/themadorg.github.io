@@ -314,7 +314,9 @@
 	}
 
 	h1 {
-		font-size: var(--step-display);
+		/* The second term only bites on phones: it keeps the longest word
+		   (COMMUNICATION, ~5.3em) inside the envelope at 320-400px wide. */
+		font-size: min(var(--step-display), calc(18.5vw - 1.35rem));
 		max-width: 12ch;
 	}
 

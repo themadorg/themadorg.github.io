@@ -1,6 +1,6 @@
 {
 	"org_name": "TheMadOrg",
-	"tagline": "We care about communication",
+	"tagline": "We care about secure communication",
 	"pitch": "Open-source infrastructure for private messaging and self-hosted meetings: chatmail relays, video, and tools around the Delta Chat ecosystem.",
 	"meta_title": "TheMadOrg: open-source infrastructure for private communication",
 	"meta_description": "TheMadOrg builds open-source, self-hosted communication infrastructure: Madmail chatmail relays for Delta Chat, Bedrud video meetings, SDKs, admin tools and docs.",
