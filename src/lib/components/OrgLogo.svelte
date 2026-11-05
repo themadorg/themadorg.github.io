@@ -25,7 +25,6 @@
 		display: block;
 		width: var(--logo-size, 1.75rem);
 		height: var(--logo-size, 1.75rem);
-		border-radius: 0.4rem;
 		object-fit: cover;
 		flex-shrink: 0;
 	}

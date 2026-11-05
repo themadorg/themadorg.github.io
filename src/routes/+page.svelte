@@ -2,31 +2,34 @@
 	import { browser } from '$app/environment';
 	import { goto } from '$app/navigation';
 	import { preferLangClient } from '$lib/i18n.svelte';
-	import { supportedLanguages } from '$lib/languages';
+	import { defaultLang, supportedLanguages } from '$lib/languages';
+	import { pageUrl } from '$lib/seo';
 	import { onMount } from 'svelte';
 
 	onMount(() => {
 		if (browser) {
-			goto(`/${preferLangClient()}`, { replaceState: true });
+			goto(`/${preferLangClient()}/`, { replaceState: true });
 		}
 	});
 </script>
 
 <svelte:head>
 	<title>TheMadOrg</title>
-	<meta name="description" content="We care about communication" />
-	<meta http-equiv="refresh" content="0;url=/en/" />
-	<link rel="canonical" href="/en/" />
+	<meta name="description" content="TheMadOrg builds open-source, self-hosted communication infrastructure." />
+	<meta name="robots" content="noindex, follow" />
+	<noscript><meta http-equiv="refresh" content="0;url=/en/" /></noscript>
+	<link rel="canonical" href={pageUrl(defaultLang)} />
 	{#each supportedLanguages as lang (lang.code)}
-		<link rel="alternate" hreflang={lang.code} href={`/${lang.code}/`} />
+		<link rel="alternate" hreflang={lang.code} href={pageUrl(lang.code)} />
 	{/each}
+	<link rel="alternate" hreflang="x-default" href={pageUrl(defaultLang)} />
 </svelte:head>
 
 <main class="fallback">
 	<p>TheMadOrg</p>
 	<nav aria-label="Languages">
 		{#each supportedLanguages as lang (lang.code)}
-			<a href={`/${lang.code}/`}>{lang.name}</a>
+			<a href={`/${lang.code}/`} lang={lang.code} hreflang={lang.code}>{lang.name}</a>
 		{/each}
 	</nav>
 </main>
@@ -40,15 +43,16 @@
 		gap: 1.25rem;
 		min-height: 100dvh;
 		padding: 2rem;
-		font-family: var(--font-sans);
-		color: var(--color-text);
-		background: var(--color-bg);
+		background: var(--paper);
+		color: var(--ink);
 	}
 
 	p {
 		margin: 0;
-		font-weight: 600;
-		letter-spacing: -0.02em;
+		font-family: var(--font-display);
+		font-size: var(--step-h3);
+		font-weight: 800;
+		text-transform: uppercase;
 	}
 
 	nav {
@@ -59,13 +63,7 @@
 	}
 
 	a {
-		color: var(--color-text-muted);
-		text-decoration: none;
-		font-size: 0.95rem;
-	}
-
-	a:hover {
-		color: var(--color-text);
-		text-decoration: underline;
+		color: var(--ink-2);
+		font-size: var(--step-small);
 	}
 </style>

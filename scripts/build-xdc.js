@@ -37,7 +37,17 @@ const EXCLUDE_PATTERNS = [
 	/robots\.txt$/,
 	/_headers$/,
 	/sitemap\.xml$/,
-	/^CNAME$/
+	/^CNAME$/,
+	// Web-only discovery files: meaningless inside an offline Delta Chat app.
+	/^llms(-full)?\.txt$/,
+	/^\.well-known\//,
+	/^site\.webmanifest$/,
+	/^og\.png$/,
+	/^404\.html$/,
+	// The 404 slip's own copy of the display face; the app bundles its fonts.
+	/^fonts\//,
+	// Screenshot provenance notes next to the stamp images; not app assets.
+	/^stamps\/.*\.json$/
 ];
 
 const LANGS = ['en', 'fa', 'es', 'ru'];
@@ -181,7 +191,9 @@ for (const file of getAllFiles(XDC_STAGE)) {
 		(_, t, p) => `content="${t}; url=${toRoot}${p}"`
 	);
 
-	// hreflang and similar absolute paths in attributes we already covered with href=
+	// Head links to web-only files that are not packaged (manifest, llms.txt)
+	content = content.replace(/<link rel="manifest"[^>]*>\s*/g, '');
+	content = content.replace(/<link rel="alternate" type="text\/plain"[^>]*>\s*/g, '');
 
 	writeFileSync(filePath, content);
 	htmlFixed++;

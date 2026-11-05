@@ -31,7 +31,7 @@
 	<button
 		type="button"
 		class="trigger"
-		aria-haspopup="listbox"
+		aria-haspopup="true"
 		aria-expanded={open}
 		aria-label={i18n.t('select_language')}
 		onclick={() => (open = !open)}
@@ -50,13 +50,15 @@
 	</button>
 
 	{#if open}
-		<ul class="menu" role="listbox" aria-label={i18n.t('select_language')}>
+		<ul class="menu" aria-label={i18n.t('select_language')}>
 			{#each supportedLanguages as lang (lang.code)}
-				<li role="option" aria-selected={i18n.lang === lang.code}>
+				<li>
 					<button
 						type="button"
 						class="option"
 						class:active={i18n.lang === lang.code}
+						aria-current={i18n.lang === lang.code ? 'true' : undefined}
+						lang={lang.code}
 						onclick={() => select(lang.code)}
 					>
 						<span class="opt-code">{lang.code}</span>
@@ -77,88 +79,104 @@
 		display: inline-flex;
 		align-items: center;
 		gap: 0.35rem;
-		height: 2.25rem;
-		padding: 0 0.65rem;
-		border: 1px solid var(--color-border);
-		border-radius: 0.5rem;
-		background: transparent;
-		color: var(--color-text-muted);
-		font-family: var(--font-mono);
-		font-size: 0.75rem;
-		font-weight: 500;
+		height: 2.5rem;
+		padding: 0 0.7rem;
+		border: 0;
+		background: var(--paper-2);
+		color: var(--ink);
+		font-size: var(--step-small);
+		font-weight: 700;
+		text-transform: uppercase;
 		cursor: pointer;
 		transition:
-			color 0.15s,
-			border-color 0.15s,
-			background 0.15s;
+			background-color var(--dur-ui) var(--ease-out),
+			transform var(--dur-press) var(--ease-out);
 	}
 
-	.trigger:hover {
-		color: var(--color-text);
-		border-color: var(--color-hover-border);
-		background: var(--color-hover);
+	.trigger:active {
+		transform: scale(0.96);
 	}
 
-	.code {
-		letter-spacing: 0.02em;
+	.trigger svg {
+		transition: rotate var(--dur-ui) var(--ease-out);
 	}
 
+	.trigger[aria-expanded='true'] svg {
+		rotate: 180deg;
+	}
+
+	@media (hover: hover) and (pointer: fine) {
+		.trigger:hover {
+			background: var(--paper-3);
+		}
+	}
+
+	/* A real floating menu: the one place elevation is earned. taste-skill-ignore */
 	.menu {
 		position: absolute;
 		top: calc(100% + 0.4rem);
 		inset-inline-end: 0;
 		z-index: 50;
-		min-width: 10.5rem;
+		min-width: 11rem;
 		margin: 0;
 		padding: 0.35rem;
 		list-style: none;
-		border: 1px solid var(--color-border);
-		border-radius: 0.65rem;
-		background: var(--color-surface-raised);
-		box-shadow: 0 12px 32px rgb(0 0 0 / 0.35);
+		background: var(--paper);
+		box-shadow: /* taste-skill-ignore: real overlay */
+			0 1px 2px rgb(0 0 0 / 0.12),
+			0 12px 32px rgb(0 0 0 / 0.18);
+		transform-origin: top right;
+		animation: menu-in 180ms var(--ease-out);
+	}
+
+	:dir(rtl) .menu {
+		transform-origin: top left;
+	}
+
+	@keyframes menu-in {
+		from {
+			opacity: 0;
+			transform: scale(0.96) translateY(-4px);
+		}
 	}
 
 	.option {
 		display: flex;
 		align-items: center;
-		gap: 0.65rem;
+		gap: 0.75rem;
 		width: 100%;
-		padding: 0.5rem 0.65rem;
+		padding: 0.55rem 0.7rem;
 		border: none;
-		border-radius: 0.4rem;
 		background: transparent;
-		color: var(--color-text-muted);
-		font-size: 0.875rem;
+		color: var(--ink);
+		font-size: var(--step-small);
 		text-align: start;
 		cursor: pointer;
-		transition:
-			background 0.12s,
-			color 0.12s;
+		transition: background-color 120ms var(--ease-out);
 	}
 
-	.option:hover {
-		background: var(--color-hover);
-		color: var(--color-text);
+	.option:hover,
+	.option:focus-visible {
+		background: var(--paper-2);
 	}
 
 	.option.active {
-		color: var(--color-text);
-		background: var(--color-surface);
+		background: var(--paper-2);
 	}
 
 	.opt-code {
-		font-family: var(--font-mono);
-		font-size: 0.72rem;
-		font-weight: 600;
-		color: var(--color-text-faint);
-		min-width: 1.4rem;
+		min-width: 1.6rem;
+		color: var(--ink-2);
+		font-size: var(--step-small);
+		font-weight: 700;
+		text-transform: uppercase;
 	}
 
 	.option.active .opt-code {
-		color: var(--color-accent);
+		color: var(--red);
 	}
 
 	.opt-name {
-		font-weight: 500;
+		font-weight: 600;
 	}
 </style>

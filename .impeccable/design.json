@@ -1,0 +1,747 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-05T12:00:00Z",
+  "title": "Design System: TheMadOrg",
+  "extensions": {
+    "colorMeta": {
+      "red": {
+        "role": "primary",
+        "displayName": "Airmail Red",
+        "canonical": "oklch(56.9% 0.210 25.4)",
+        "tonalRamp": [
+          "#350000",
+          "#600000",
+          "#8d0000",
+          "#b7000e",
+          "#df3035",
+          "#ff5a57",
+          "#ff8e85",
+          "#ffc3b8"
+        ],
+        "light": "#d7262e",
+        "dark": "#ff4d55",
+        "note": "Brand voice in text and marks: address labels, tab underline, principle leads, ours stops, FAQ plus, footer titles, link underlines, selection. Not the action fill (that is red-field)."
+      },
+      "on-red": {
+        "role": "primary",
+        "displayName": "On Red",
+        "canonical": "oklch(100.0% 0.000 89.9)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#7d7d7d",
+          "#9e9e9e",
+          "#c4c4c4",
+          "#eeeeee"
+        ],
+        "light": "#ffffff",
+        "dark": "#14161b",
+        "note": "Text on a themed red fill: the skip link and the 404 home button."
+      },
+      "red-field": {
+        "role": "primary",
+        "displayName": "Registered Red",
+        "canonical": "oklch(52.9% 0.198 25.3)",
+        "tonalRamp": [
+          "#340000",
+          "#5e0000",
+          "#8a0000",
+          "#b30018",
+          "#da393b",
+          "#ff605b",
+          "#ff9289",
+          "#ffc6bb"
+        ],
+        "light": "#c41f28",
+        "note": "Scheme-fixed red: action buttons, copy-done state, funding section, red stamp faces, hero stamp frame, registered slip R block and bullets, selvage colour check."
+      },
+      "red-field-ink": {
+        "role": "primary",
+        "displayName": "Registered Ink",
+        "canonical": "oklch(100.0% 0.000 89.9)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#7d7d7d",
+          "#9e9e9e",
+          "#c4c4c4",
+          "#eeeeee"
+        ],
+        "light": "#ffffff",
+        "note": "Lettering on the red field and on actions."
+      },
+      "blue": {
+        "role": "secondary",
+        "displayName": "Airmail Blue",
+        "canonical": "oklch(37.9% 0.138 265.2)",
+        "tonalRamp": [
+          "#010039",
+          "#061960",
+          "#1b3787",
+          "#3758ab",
+          "#5579cf",
+          "#749bf4",
+          "#9bc2ff",
+          "#caeeff"
+        ],
+        "light": "#1d3a8a",
+        "dark": "#8ea8f0",
+        "note": "WIP status on stamps and the route key line symbol. The chevron bands are hard-coded #1d3a8a inside --airmail, not this token."
+      },
+      "blue-field": {
+        "role": "secondary",
+        "displayName": "Par Avion Blue",
+        "canonical": "oklch(37.9% 0.138 265.2)",
+        "tonalRamp": [
+          "#010039",
+          "#061960",
+          "#1b3787",
+          "#3758ab",
+          "#5579cf",
+          "#749bf4",
+          "#9bc2ff",
+          "#caeeff"
+        ],
+        "light": "#1d3a8a",
+        "note": "Scheme-fixed blue: PAR AVION label, blue stamp faces, selvage colour check, registered slip focus ring."
+      },
+      "blue-field-ink": {
+        "role": "secondary",
+        "displayName": "Par Avion Ink",
+        "canonical": "oklch(100.0% 0.000 89.9)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#7d7d7d",
+          "#9e9e9e",
+          "#c4c4c4",
+          "#eeeeee"
+        ],
+        "light": "#ffffff",
+        "note": "Lettering on the blue field."
+      },
+      "focus": {
+        "role": "secondary",
+        "displayName": "Focus Blue",
+        "canonical": "oklch(37.9% 0.138 265.2)",
+        "tonalRamp": [
+          "#010039",
+          "#061960",
+          "#1b3787",
+          "#3758ab",
+          "#5579cf",
+          "#749bf4",
+          "#9bc2ff",
+          "#caeeff"
+        ],
+        "light": "#1d3a8a",
+        "dark": "#8ea8f0",
+        "note": "3px focus ring, 3px offset."
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Envelope Paper",
+        "canonical": "oklch(100.0% 0.000 89.9)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#7d7d7d",
+          "#9e9e9e",
+          "#c4c4c4",
+          "#eeeeee"
+        ],
+        "light": "#ffffff",
+        "dark": "#14161b",
+        "note": "Desk (page ground), nav, envelope face, hero stamp holes, route key caption ground, CN 22 outline margin, top flap of the envelope back."
+      },
+      "paper-2": {
+        "role": "neutral",
+        "displayName": "Cool Paper",
+        "canonical": "oklch(94.8% 0.005 258.3)",
+        "tonalRamp": [
+          "#0a0b0d",
+          "#232426",
+          "#3e4042",
+          "#5c5e60",
+          "#7c7d80",
+          "#9d9ea1",
+          "#c2c4c7",
+          "#edeff2"
+        ],
+        "light": "#eceef1",
+        "dark": "#1c1f26",
+        "note": "Selvage and its perforation holes, hero stamp body, customs Contents write-in field, bottom flap of the envelope back, tool buttons."
+      },
+      "paper-3": {
+        "role": "neutral",
+        "displayName": "Deep Paper",
+        "canonical": "oklch(91.4% 0.008 253.9)",
+        "tonalRamp": [
+          "#090b0f",
+          "#212428",
+          "#3d4044",
+          "#5a5e62",
+          "#7a7e82",
+          "#9b9fa3",
+          "#c1c4c9",
+          "#ebeff4"
+        ],
+        "light": "#dfe3e8",
+        "dark": "#262a33",
+        "note": "Tool button hover, scrollbar thumb, side flaps of the envelope back."
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "oklch(19.1% 0.009 264.3)",
+        "tonalRamp": [
+          "#090b0f",
+          "#222428",
+          "#3d4044",
+          "#5b5e63",
+          "#7b7d83",
+          "#9c9ea4",
+          "#c1c4ca",
+          "#ebeef4"
+        ],
+        "light": "#121418",
+        "dark": "#eef0f3",
+        "note": "Text, the To rule, letterhead rule, CN 22 frame and field rules, route key frame, route nodes and cancellations, copy button ground."
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Faded Ink",
+        "canonical": "oklch(41.5% 0.016 262.3)",
+        "tonalRamp": [
+          "#080b12",
+          "#20242c",
+          "#3b4049",
+          "#595e67",
+          "#787d87",
+          "#999fa9",
+          "#bec4cf",
+          "#e9effa"
+        ],
+        "light": "#474c55",
+        "dark": "#aab0bb",
+        "note": "Secondary text: unselected tabs, the return address product line, stamp meta, form captions, selvage marks, footer notes."
+      },
+      "slip-paper": {
+        "role": "neutral",
+        "displayName": "Slip Paper",
+        "canonical": "oklch(100.0% 0.000 89.9)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#7d7d7d",
+          "#9e9e9e",
+          "#c4c4c4",
+          "#eeeeee"
+        ],
+        "light": "#ffffff",
+        "note": "Scheme-fixed paper: the registered slip, the ground behind the hero stamp logo."
+      },
+      "slip-paper-2": {
+        "role": "neutral",
+        "displayName": "Slip Paper 2",
+        "canonical": "oklch(94.8% 0.005 258.3)",
+        "tonalRamp": [
+          "#0a0b0d",
+          "#232426",
+          "#3e4042",
+          "#5c5e60",
+          "#7c7d80",
+          "#9d9ea1",
+          "#c2c4c7",
+          "#edeff2"
+        ],
+        "light": "#eceef1",
+        "note": "Scheme-fixed: the \"Registered\" text block on the registered slip."
+      },
+      "slip-ink": {
+        "role": "neutral",
+        "displayName": "Slip Ink",
+        "canonical": "oklch(19.1% 0.009 264.3)",
+        "tonalRamp": [
+          "#090b0f",
+          "#222428",
+          "#3d4044",
+          "#5b5e63",
+          "#7b7d83",
+          "#9c9ea4",
+          "#c1c4ca",
+          "#ebeef4"
+        ],
+        "light": "#121418",
+        "note": "Scheme-fixed ink on the registered slip."
+      },
+      "picture-backdrop": {
+        "role": "neutral",
+        "displayName": "Picture Backdrop",
+        "canonical": "oklch(18.7% 0.011 268.1)",
+        "tonalRamp": [
+          "#090b0f",
+          "#222428",
+          "#3d4044",
+          "#5b5e63",
+          "#7b7d83",
+          "#9c9ea4",
+          "#c1c4ca",
+          "#ebeef4"
+        ],
+        "light": "#111318",
+        "note": "Dark screen ground a stamp screenshot letterboxes into."
+      },
+      "sheet": {
+        "role": "neutral",
+        "displayName": "Sheet Paper",
+        "canonical": "oklch(100.0% 0.000 89.9)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#7d7d7d",
+          "#9e9e9e",
+          "#c4c4c4",
+          "#eeeeee"
+        ],
+        "light": "#ffffff",
+        "dark": "#e7e9ec",
+        "note": "Paper that postal objects (.sheet) are printed on; dims slightly on the dark desk, never turns dark. The 404 slip uses its own copy."
+      },
+      "sheet-2": {
+        "role": "neutral",
+        "displayName": "Sheet Paper 2",
+        "canonical": "oklch(94.8% 0.005 258.3)",
+        "tonalRamp": [
+          "#0a0b0d",
+          "#232426",
+          "#3e4042",
+          "#5c5e60",
+          "#7c7d80",
+          "#9d9ea1",
+          "#c2c4c7",
+          "#edeff2"
+        ],
+        "light": "#eceef1",
+        "dark": "#d6dade",
+        "note": "paper-2 inside .sheet; FAQ cards use it directly."
+      },
+      "sheet-3": {
+        "role": "neutral",
+        "displayName": "Sheet Paper 3",
+        "canonical": "oklch(91.4% 0.008 253.9)",
+        "tonalRamp": [
+          "#090b0f",
+          "#212428",
+          "#3d4044",
+          "#5a5e62",
+          "#7a7e82",
+          "#9b9fa3",
+          "#c1c4c9",
+          "#ebeff4"
+        ],
+        "light": "#dfe3e8",
+        "dark": "#c8cdd3",
+        "note": "paper-3 inside .sheet."
+      },
+      "sheet-red": {
+        "role": "primary",
+        "displayName": "Sheet Red",
+        "canonical": "oklch(56.9% 0.210 25.4)",
+        "tonalRamp": [
+          "#350000",
+          "#600000",
+          "#8d0000",
+          "#b7000e",
+          "#df3035",
+          "#ff5a57",
+          "#ff8e85",
+          "#ffc3b8"
+        ],
+        "light": "#d7262e",
+        "dark": "#b81f27",
+        "note": "Red ink printed on paper: .sheet maps --red to it. Deeper on the dimmed dark-mode sheet so small red labels keep 5.3:1."
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero h1 (max 12ch, 8em under :lang(fa)), funding h2 (h2 step under 640px), 404 headline. Uppercase, text-wrap balance."
+      },
+      "h2": {
+        "displayName": "Headline",
+        "purpose": "Section h2s, the aerogramme subject line, featured stamp names (Madmail, Bedrud), customs slip project names, funding email. Uppercase."
+      },
+      "h3": {
+        "displayName": "Title",
+        "purpose": "Stamp names, route stops, nav wordmark, letterhead name, PAR AVION, letter signature, registered slip header. Uppercase."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Pitch, ledes, letter intro, FAQ questions (text face, 700, sentence case). In the display face at 800 uppercase it is the label size: From/To labels, CN 22 form title and code, route key caption, footer Return address and list titles, screenshot denomination tag."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Reading text, measure 34-44rem; line-height 1.6 in the letter and FAQ answers, 1.8 under :lang(fa). Featured and wide stamp blurbs."
+      },
+      "small": {
+        "displayName": "Small",
+        "purpose": "Meta, nav links, tool buttons, copy button, form captions, route key, funding checklist, footer notes."
+      },
+      "code": {
+        "displayName": "Code",
+        "purpose": "Literal install commands only, in the customs Contents field: dir=ltr, text-align left, one block per command line with a 2ch hanging indent."
+      },
+      "fa-display": {
+        "displayName": "Persian Display Stack",
+        "purpose": "'Sofia Sans Extra Condensed Variable', 'Vazirmatn Variable', Tahoma, sans-serif. Sofia first: no Arabic-script glyphs, so Persian falls back per glyph to Vazirmatn while Latin brand names keep the condensed cut. Headings line-height 1.25, letter-spacing 0."
+      },
+      "fa-text": {
+        "displayName": "Persian Text Stack",
+        "purpose": "'Vazirmatn Variable', Tahoma, sans-serif; body line-height 1.8."
+      },
+      "stamp-face": {
+        "displayName": "Stamp Face Lettering",
+        "purpose": "Display 800 in container units: denomination clamp(1.25rem, 11cqi, 2.5rem); issuer line clamp(0.8125rem, 5.5cqi, 1.125rem) at 0.24em tracking. Selvage plate number 0.8125rem at 0.14em."
+      }
+    },
+    "shadows": [
+      {
+        "name": "floating-overlay",
+        "value": "0 1px 2px rgb(0 0 0 / 0.12), 0 12px 32px rgb(0 0 0 / 0.18)",
+        "purpose": "Language menu only: the one real floating overlay. Nothing else casts a shadow."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.23, 1, 0.32, 1)",
+        "purpose": "Default for everything entering or responding."
+      },
+      {
+        "name": "ease-in-out",
+        "value": "cubic-bezier(0.77, 0, 0.175, 1)",
+        "purpose": "Only the letter glyph's flight along the route (2.4s)."
+      },
+      {
+        "name": "dur-press",
+        "value": "140ms",
+        "purpose": "Press scale feedback (0.94-0.985)."
+      },
+      {
+        "name": "dur-ui",
+        "value": "220ms",
+        "purpose": "Hover, colour, underline, tab, copy icon swap, FAQ height, route cancellations."
+      },
+      {
+        "name": "dur-enter",
+        "value": "640ms",
+        "purpose": "The stamp sheet settle entrance."
+      },
+      {
+        "name": "settle",
+        "value": "opacity 0, translate 0 -14px, scale 1.03, rotate -1.2deg (RTL 1.2deg) -> rest over --dur-enter; 70ms --settle-delay between stamps arriving together",
+        "purpose": "The stamp sheet's single entrance: each stamp is laid onto the sheet as it enters view (IntersectionObserver, threshold 0.12, rootMargin bottom -8%). Only under html.js, screen, no-preference."
+      },
+      {
+        "name": "readdress",
+        "value": "260ms cubicOut; opacity, translateY 6px, blur 3px",
+        "purpose": "Role-tab re-addressing of the envelope's To line; 0ms under reduced motion."
+      },
+      {
+        "name": "stamp-in",
+        "value": "700ms var(--ease-out) 120ms",
+        "purpose": "Hero stamp drops in from -14px, -6deg."
+      },
+      {
+        "name": "cancel",
+        "value": "520ms var(--ease-out) 620ms",
+        "purpose": "Postmark strikes the hero stamp from scale 1.18."
+      },
+      {
+        "name": "flight",
+        "value": "translate 2.4s var(--ease-in-out); 100cqi - 44px (vertical: 100cqb - 30px)",
+        "purpose": "The route letter flies the line when the track enters view (rootMargin bottom -38%); each stop is cancelled from scale 1.35 as it passes."
+      },
+      {
+        "name": "menu-in",
+        "value": "180ms var(--ease-out)",
+        "purpose": "Language menu opens from scale 0.96, -4px."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "transition/animation-duration 0.01ms !important; scroll-behavior auto",
+        "purpose": "prefers-reduced-motion: reduce kills all travel; the route shows delivered."
+      },
+      {
+        "name": "hover-gate",
+        "value": "@media (hover: hover) and (pointer: fine)",
+        "purpose": "Every hover effect lives inside this query."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "install-even",
+        "value": "1199px (max) / 961px (min)"
+      },
+      {
+        "name": "plate-4col",
+        "value": "1180px (min) / 1179px (max)"
+      },
+      {
+        "name": "footer-stack",
+        "value": "1100px"
+      },
+      {
+        "name": "route-key-narrow",
+        "value": "861-1100px"
+      },
+      {
+        "name": "nav-links",
+        "value": "1020px"
+      },
+      {
+        "name": "install-fund-collapse",
+        "value": "960px"
+      },
+      {
+        "name": "envelope-stack",
+        "value": "900px"
+      },
+      {
+        "name": "route-vertical-faq-collapse",
+        "value": "860px"
+      },
+      {
+        "name": "plate-1col",
+        "value": "699px"
+      },
+      {
+        "name": "mobile",
+        "value": "640px"
+      },
+      {
+        "name": "nav-compact",
+        "value": "480px"
+      },
+      {
+        "name": "featured-landscape",
+        "value": "@container 760px (min)"
+      },
+      {
+        "name": "flap-shape",
+        "value": "@container 720px / 480px (max)"
+      }
+    ],
+    "patterns": [
+      {
+        "name": "airmail",
+        "value": "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath fill='%23d7262e' d='M0 0h10L0 10zM0 40L40 0v10L10 40z'/%3E%3Cpath fill='%231d3a8a' d='M0 20L20 0h10L0 30zM20 40l20-20v10L30 40z'/%3E%3C/svg%3E\")",
+        "purpose": "Chevron band shown as a border by padding paper over the tile: 40px on the envelope face, envelope back and 404 slip; 24px on all four edges of the aerogramme; 20px on the route line."
+      },
+      {
+        "name": "perforation",
+        "value": ".paper::before { inset-block-start: -5px; inset-inline: -5px 0; border-block-start: 10px dotted var(--hole); } .paper::after { inset-block: -5px 0; inset-inline-start: -5px; border-inline-start: 10px dotted var(--hole); } .plate::after { inset-block: 0 -5px; inset-inline: 0 -5px; border-block-end: 10px dotted var(--hole); border-inline-end: 10px dotted var(--hole); }",
+        "purpose": "Shared-gutter perforation: stamps butt with gap 0 and punch only their start edges; the plate punches the outer end edges. --hole is paper-2. The hero stamp alone uses one inset:-5px dotted border in paper."
+      }
+    ],
+    "layout": {
+      "contentMax": "86rem",
+      "margin": "clamp(1.25rem, 4vw, 3rem)",
+      "sectionGap": "clamp(6rem, 4rem + 8vw, 11rem)",
+      "grids": "Per section: envelope even halves (1fr/1fr) on named areas; stamp-sheet head 5/7, plate 4 cols (Madmail and Bedrud 2x2) / 2 / 1; aerogramme single 58rem column; route 1fr | minmax(19rem, 27rem) with the key in the end corner; install shared 7/5 grid with 5 subgrid rows (even halves 961-1199px); funding 8/4; FAQ 5/7; footer desk 7/5."
+    }
+  },
+  "components": [
+    {
+      "name": "Action",
+      "kind": "button",
+      "refersTo": "action",
+      "description": "The one primary button: flat square scheme-fixed red fill, trailing arrow.",
+      "html": "<a class=\"ds-action\" href=\"#\">Write to us about funding <svg class=\"ds-arrow\" width=\"18\" height=\"18\" viewBox=\"0 0 18 18\" aria-hidden=\"true\"><path d=\"M3 9h11M10 4.5 14.5 9 10 13.5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"square\"/></svg></a>",
+      "css": ".ds-action{display:inline-flex;align-items:center;gap:.6em;min-height:3.25rem;padding:.85rem 1.5rem;border:0;border-radius:0;background:var(--red-field);color:var(--red-field-ink);font-family:var(--font-text);font-size:1.125rem;font-weight:700;line-height:1.2;text-decoration:none;cursor:pointer;transition:transform 140ms cubic-bezier(.23,1,.32,1),background-color 220ms cubic-bezier(.23,1,.32,1)}.ds-action .ds-arrow{transition:transform 220ms cubic-bezier(.23,1,.32,1)}.ds-action:active{transform:scale(.97)}.ds-action:focus-visible{outline:3px solid var(--focus);outline-offset:3px}@media (hover: hover) and (pointer: fine){.ds-action:hover{background:color-mix(in oklab,var(--red-field) 86%,#000)}.ds-action:hover .ds-arrow{transform:translateX(3px)}}"
+    },
+    {
+      "name": "Text Link",
+      "kind": "button",
+      "refersTo": "textlink",
+      "description": "Secondary action: bold ink with a 2px red underline that opens on hover.",
+      "html": "<a class=\"ds-textlink\" href=\"#\">Why fund this work</a>",
+      "css": ".ds-textlink{font-weight:700;color:var(--ink);text-decoration:underline;text-decoration-color:var(--red);text-decoration-thickness:2px;text-underline-offset:.3em;transition:text-underline-offset 220ms cubic-bezier(.23,1,.32,1)}.ds-textlink:focus-visible{outline:3px solid var(--focus);outline-offset:3px}@media (hover: hover) and (pointer: fine){.ds-textlink:hover{text-underline-offset:.42em}}"
+    },
+    {
+      "name": "Role Tabs",
+      "kind": "nav",
+      "refersTo": "role-tab",
+      "description": "The envelope's To line: re-address the envelope to a role.",
+      "html": "<div class=\"ds-to\"><span class=\"ds-label\">To</span><div class=\"ds-tabs\" role=\"tablist\"><button class=\"ds-tab\" role=\"tab\" aria-selected=\"true\">Funders</button><button class=\"ds-tab\" role=\"tab\" aria-selected=\"false\">Self-hosters</button><button class=\"ds-tab\" role=\"tab\" aria-selected=\"false\">Developers</button></div></div>",
+      "css": ".ds-to{display:flex;gap:1.5rem;align-items:baseline;padding-top:1.25rem;border-top:3px solid var(--ink)}.ds-label{font-family:var(--font-display);font-size:1.25rem;font-weight:800;text-transform:uppercase;color:var(--red)}.ds-tabs{display:flex;flex-wrap:wrap;gap:.25rem 1.25rem}.ds-tab{position:relative;padding:.35rem 0 .45rem;border:0;background:none;color:var(--ink-2);font:inherit;font-size:1.125rem;font-weight:700;cursor:pointer;transition:color 220ms cubic-bezier(.23,1,.32,1)}.ds-tab::after{content:'';position:absolute;inset-inline:0;bottom:0;height:3px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform 220ms cubic-bezier(.23,1,.32,1)}.ds-tab[aria-selected=true]{color:var(--ink)}.ds-tab[aria-selected=true]::after{transform:scaleX(1)}.ds-tab:active{transform:scale(.97)}.ds-tab:focus-visible{outline:3px solid var(--focus);outline-offset:3px}@media (hover: hover) and (pointer: fine){.ds-tab:hover{color:var(--ink)}}"
+    },
+    {
+      "name": "Stamp",
+      "kind": "card",
+      "refersTo": "stamp",
+      "description": "Project stamp on the perforated sheet: 4:3 screenshot with a denomination tag, title, blurb, meta and links. Stamps butt together; each punches only its start edges.",
+      "html": "<div class=\"ds-selvage\"><div class=\"ds-plate\"><article class=\"ds-stamp\"><div class=\"ds-paper\"><div class=\"ds-picture\"><span class=\"ds-denom\">Rust</span></div><div class=\"ds-body\"><h3 class=\"ds-title\">Madmail</h3><p class=\"ds-blurb\">Rust chatmail relay for Delta Chat: encrypted, federated, one binary, batteries included.</p><p class=\"ds-meta\"><span class=\"ds-issue\">Relay</span><span>AGPL-3.0</span></p><p class=\"ds-links\"><span class=\"ds-go\">Website</span></p></div></div></article><article class=\"ds-stamp\"><div class=\"ds-paper\"><div class=\"ds-picture\"><span class=\"ds-denom\">TypeScript</span></div><div class=\"ds-body\"><h3 class=\"ds-title\">Madcore</h3><p class=\"ds-blurb\">TypeScript library for Delta Chat–compatible web messengers (JSON-RPC over WebSocket).</p><p class=\"ds-meta\"><span class=\"ds-issue\">SDK</span><span class=\"ds-wip\">Work in progress</span></p><p class=\"ds-links\"><span class=\"ds-go\">Repository</span></p></div></div></article></div></div>",
+      "css": ".ds-selvage{padding:2rem;background:#eceef1;max-width:40rem}.ds-plate{--hole:#eceef1;position:relative;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0}.ds-plate::after{content:'';position:absolute;inset-block:0 -5px;inset-inline:0 -5px;border-block-end:10px dotted var(--hole);border-inline-end:10px dotted var(--hole);pointer-events:none;z-index:4}.ds-stamp{display:flex;min-width:0;transition:transform 220ms cubic-bezier(.23,1,.32,1)}.ds-paper{position:relative;display:flex;flex-direction:column;width:100%;padding:16px;background:#fff;color:#121418}.ds-paper::before,.ds-paper::after{content:'';position:absolute;z-index:2;pointer-events:none}.ds-paper::before{inset-block-start:-5px;inset-inline:-5px 0;border-block-start:10px dotted var(--hole)}.ds-paper::after{inset-block:-5px 0;inset-inline-start:-5px;border-inline-start:10px dotted var(--hole)}.ds-picture{position:relative;aspect-ratio:4/3;background:#111318}.ds-denom{position:absolute;top:0;inset-inline-end:0;padding:.3rem .6rem .35rem;background:#fff;color:#121418;font-family:var(--font-display);font-size:1.25rem;font-weight:800;line-height:1;text-transform:uppercase}.ds-body{display:flex;flex-direction:column;padding:1rem .2rem .1rem}.ds-title{margin:0;font-family:var(--font-display);font-size:1.75rem;font-weight:800;line-height:.92;text-transform:uppercase}.ds-blurb{margin:.6rem 0 0;font-size:.9375rem;line-height:1.5}.ds-meta{display:flex;flex-wrap:wrap;gap:.25rem .9rem;margin:.9rem 0 0;color:#474c55;font-size:.9375rem}.ds-issue{color:#d7262e;font-weight:700}.ds-wip{color:#1d3a8a;font-weight:700}.ds-links{margin:.75rem 0 0;font-size:.9375rem;font-weight:700}.ds-go{text-decoration:underline;text-decoration-color:#d7262e;text-decoration-thickness:2px;text-underline-offset:.3em}.ds-stamp:active{transform:scale(.985)}@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference){.ds-stamp:hover{position:relative;z-index:3;transform:translateY(-4px) rotate(-.6deg)}}"
+    },
+    {
+      "name": "Postmark",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "Circular cancellation with wavy lines; ring names the org and what it ships. Latin and LTR in every locale, decorative, mirrored in RTL by moving the ring.",
+      "html": "<svg class=\"ds-postmark\" viewBox=\"0 0 320 140\" aria-hidden=\"true\" lang=\"en\" dir=\"ltr\"><defs><path id=\"ds-ring\" d=\"M 70 70 m -50 0 a 50 50 0 1 1 100 0 a 50 50 0 1 1 -100 0\"/></defs><g fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\"><circle cx=\"70\" cy=\"70\" r=\"62\"/><circle cx=\"70\" cy=\"70\" r=\"38\" stroke-width=\"2\"/><path d=\"M140 44 q 22 -10 44 0 t 44 0 t 44 0 t 44 0 M140 70 q 22 -10 44 0 t 44 0 t 44 0 t 44 0 M140 96 q 22 -10 44 0 t 44 0 t 44 0 t 44 0\"/></g><text class=\"ds-ring\" fill=\"currentColor\"><textPath href=\"#ds-ring\">TheMadOrg · Madmail · Bedrud · </textPath></text><text class=\"ds-date\" x=\"70\" y=\"76\" text-anchor=\"middle\" fill=\"currentColor\">Nov 2026</text></svg>",
+      "css": ".ds-postmark{width:20rem;height:auto;overflow:visible;color:var(--ink);opacity:.82}.ds-ring{font-family:var(--font-display);font-size:15px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}.ds-date{font-family:var(--font-display);font-size:17px;font-weight:800;text-transform:uppercase}"
+    },
+    {
+      "name": "Par Avion Label",
+      "kind": "chip",
+      "refersTo": "par-avion",
+      "description": "Blue airmail label stuck on crooked under the return address.",
+      "html": "<p class=\"ds-par-avion\"><span class=\"ds-pa-main\">Par avion</span><span class=\"ds-pa-sub\">By air mail</span></p>",
+      "css": ".ds-par-avion{display:inline-flex;flex-direction:column;align-items:center;margin:0;padding:.55rem 1rem .6rem;background:var(--blue-field);color:var(--blue-field-ink);line-height:1;rotate:-2deg}.ds-pa-main{font-family:var(--font-display);font-size:1.75rem;font-weight:800;text-transform:uppercase}.ds-pa-sub{margin-top:.2rem;font-size:.9375rem;font-weight:600}"
+    },
+    {
+      "name": "Customs Slip",
+      "kind": "card",
+      "refersTo": "customs-slip",
+      "description": "CN 22 customs declaration: ruled form with head, From, facts, Contents (the literal command) and Note.",
+      "html": "<article class=\"ds-cn22\"><div class=\"ds-row ds-head\"><p class=\"ds-ftitle\">Customs declaration</p><p class=\"ds-fcode\" dir=\"ltr\">CN 22</p></div><div class=\"ds-row ds-from\"><p class=\"ds-alabel\">From</p><h3 class=\"ds-name\">Bedrud</h3><p class=\"ds-what\">A video meeting server</p></div><div class=\"ds-row ds-facts\"><div class=\"ds-box\"><p class=\"ds-cap\">License</p><p class=\"ds-val\">AGPL-3.0</p></div><div class=\"ds-box\"><p class=\"ds-cap\">Language</p><p class=\"ds-val\">Go</p></div></div><div class=\"ds-row ds-contents\"><div class=\"ds-chead\"><p class=\"ds-cap\">Contents</p><button class=\"ds-copy\" type=\"button\">Copy</button></div><pre dir=\"ltr\"><code>curl -fsSL https://bedrud.org/install.sh | bash</code></pre></div><div class=\"ds-row ds-note\"><p class=\"ds-cap\">Note</p><p>Installs Bedrud on any small VPS.</p></div></article>",
+      "css": ".ds-cn22{max-width:34rem;background:#fff;color:#121418;border:2px solid #121418;outline:.375rem solid #fff}.ds-cn22 p{margin:0}.ds-row{border-block-start:1px solid #121418}.ds-head{display:flex;border-block-start:0}.ds-ftitle{flex:1;padding:.7rem 1.1rem .6rem;border-inline-end:1px solid #121418;font-family:var(--font-display);font-size:1.25rem;font-weight:800;line-height:1;text-transform:uppercase}.ds-fcode{display:flex;align-items:center;padding:.6rem 1rem;font-family:var(--font-display);font-size:1.25rem;font-weight:800;line-height:1}.ds-from{display:flex;flex-wrap:wrap;align-items:baseline;gap:.5rem 1.25rem;padding:1.25rem 1.1rem}.ds-alabel{color:#d7262e;font-family:var(--font-display);font-size:1.25rem;font-weight:800;line-height:1;text-transform:uppercase}.ds-name{margin:0;font-family:var(--font-display);font-size:2.5rem;font-weight:800;line-height:.92;text-transform:uppercase}.ds-what{color:#d7262e;font-weight:700}.ds-facts{display:grid;grid-template-columns:1fr 1fr}.ds-box{display:grid;gap:.2rem;padding:.75rem 1.1rem .85rem}.ds-box+.ds-box{border-inline-start:1px solid #121418}.ds-cap{color:#474c55;font-size:.9375rem;font-weight:600;line-height:1.3}.ds-val{font-weight:700}.ds-contents{display:flex;flex-direction:column;gap:.6rem;padding:.75rem 1.1rem 1.1rem}.ds-chead{display:flex;align-items:center;justify-content:space-between;gap:1rem}.ds-contents pre{margin:0;padding:1rem 1.1rem;background:#eceef1;font-family:ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;font-size:.9375rem;line-height:1.7;white-space:pre-wrap;overflow-wrap:anywhere;text-align:left}.ds-copy{min-width:6.5rem;min-height:2.5rem;padding:.45rem .9rem;border:0;background:#121418;color:#fff;font:inherit;font-size:.9375rem;font-weight:700;cursor:pointer;transition:transform 140ms cubic-bezier(.23,1,.32,1),background-color 220ms cubic-bezier(.23,1,.32,1)}.ds-copy:active{transform:scale(.96)}.ds-copy:focus-visible{outline:3px solid #1d3a8a;outline-offset:3px}.ds-note{display:grid;gap:.2rem;padding:.75rem 1.1rem 1rem;font-size:.9375rem}"
+    },
+    {
+      "name": "Tool Button",
+      "kind": "button",
+      "refersTo": "tool-button",
+      "description": "Language trigger and theme toggle: square paper-2 blocks in the nav.",
+      "html": "<button class=\"ds-tool\" type=\"button\">EN <svg width=\"12\" height=\"12\" viewBox=\"0 0 12 12\" aria-hidden=\"true\"><path d=\"M3 4.5 6 7.5 9 4.5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button>",
+      "css": ".ds-tool{display:inline-flex;align-items:center;gap:.35rem;height:2.5rem;padding:0 .7rem;border:0;background:var(--paper-2);color:var(--ink);font:inherit;font-size:.9375rem;font-weight:700;text-transform:uppercase;cursor:pointer;transition:background-color 220ms cubic-bezier(.23,1,.32,1),transform 140ms cubic-bezier(.23,1,.32,1)}.ds-tool:active{transform:scale(.96)}.ds-tool:focus-visible{outline:3px solid var(--focus);outline-offset:3px}@media (hover: hover) and (pointer: fine){.ds-tool:hover{background:var(--paper-3)}}"
+    },
+    {
+      "name": "FAQ Item",
+      "kind": "custom",
+      "refersTo": "faq-item",
+      "description": "Filing card in sheet-2 (paper in both themes) with a red plus that turns to a cross when open.",
+      "html": "<details class=\"ds-faq\" open><summary><h3 class=\"ds-q\">Is the software free?</h3><svg class=\"ds-mark\" width=\"22\" height=\"22\" viewBox=\"0 0 22 22\" aria-hidden=\"true\"><path d=\"M3 11h16M11 3v16\" stroke=\"currentColor\" stroke-width=\"3\"/></svg></summary><p>Yes. The projects are published as open source on GitHub.</p></details>",
+      "css": ".ds-faq{color-scheme:light;background:var(--sheet-2);color:var(--ink)}.ds-faq summary{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding:1.25rem 1.5rem;cursor:pointer;list-style:none}.ds-faq summary::-webkit-details-marker{display:none}.ds-q{margin:0;font-family:var(--font-text);font-size:1.25rem;font-weight:700;line-height:1.3;text-transform:none;letter-spacing:0}.ds-mark{flex-shrink:0;color:var(--red);transition:rotate 220ms cubic-bezier(.23,1,.32,1)}.ds-faq[open] .ds-mark{rotate:45deg}.ds-faq p{margin:0;padding:0 1.5rem 1.5rem;line-height:1.6}.ds-faq summary:focus-visible{outline:3px solid var(--focus);outline-offset:3px}@media (hover: hover) and (pointer: fine){.ds-faq summary:hover .ds-q{color:var(--red)}}"
+    },
+    {
+      "name": "Stamp Face",
+      "kind": "custom",
+      "refersTo": "stamp-face-blue",
+      "description": "Engraved two-colour face for a stamp without a screenshot: denomination (the language), hatched vignette window, issuer line TheMadOrg. Never repeats the project name.",
+      "html": "<div class=\"ds-face\" aria-hidden=\"true\"><span class=\"ds-value\" lang=\"en\" dir=\"ltr\">TypeScript</span><div class=\"ds-window\"><svg viewBox=\"0 0 200 130\" width=\"100%\" height=\"100%\"><g fill=\"none\" stroke=\"currentColor\" stroke-width=\"4\"><path d=\"M44 20C30 20 33 32 33 45C33 58 30 64 20 65C30 66 33 72 33 85C33 98 30 110 44 110\"/><path d=\"M156 20C170 20 167 32 167 45C167 58 170 64 180 65C170 66 167 72 167 85C167 98 170 110 156 110\"/></g><g fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"52\" y=\"48\" width=\"34\" height=\"34\"/><rect x=\"114\" y=\"44\" width=\"34\" height=\"42\"/></g></svg></div><span class=\"ds-issuer\" lang=\"en\" dir=\"ltr\">TheMadOrg</span></div>",
+      "css": ".ds-face{container-type:size;display:grid;grid-template-rows:auto minmax(0,1fr) auto;gap:.6rem;width:20rem;aspect-ratio:4/3;padding:1rem;background:#1d3a8a;color:#fff}.ds-value,.ds-issuer{font-family:var(--font-display);font-weight:800;line-height:.85;text-transform:uppercase}.ds-value{justify-self:end;font-size:clamp(1.25rem,11cqi,2.5rem)}.ds-issuer{justify-self:center;font-size:clamp(.8125rem,5.5cqi,1.125rem);letter-spacing:.24em;margin-inline-end:-.24em}.ds-window{position:relative;overflow:hidden;margin:4px;border:1.5px solid currentColor;outline:1px solid currentColor;outline-offset:3px;background:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='4'%3E%3Cpath d='M0 .5H8' stroke='%23fff' stroke-width='.75'/%3E%3C/svg%3E\")}.ds-window svg{position:absolute;inset:5% 4% 0;width:92%;height:95%;background:#1d3a8a}"
+    },
+    {
+      "name": "Route Key",
+      "kind": "custom",
+      "refersTo": "route-key",
+      "description": "Map key for the route: 2px ink box with its caption sitting in the top rule, symbols drawn from the route's own vocabulary.",
+      "html": "<aside class=\"ds-key\"><h3 class=\"ds-key-title\">Around the route</h3><ul><li><svg viewBox=\"0 0 48 24\" width=\"48\" height=\"24\" aria-hidden=\"true\"><path d=\"M15 12h18\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-dasharray=\"3 3\"/><g fill=\"var(--paper)\" stroke=\"currentColor\" stroke-width=\"3\"><circle cx=\"7\" cy=\"12\" r=\"5\"/><circle cx=\"41\" cy=\"12\" r=\"5\"/></g></svg><span>Relay Ping measures how they talk to each other.</span></li><li><svg viewBox=\"0 0 48 24\" width=\"48\" height=\"24\" aria-hidden=\"true\"><path d=\"M1 12h46\" stroke=\"var(--blue)\" stroke-width=\"5\"/><circle cx=\"24\" cy=\"12\" r=\"6.5\" fill=\"var(--paper)\" stroke=\"var(--blue)\" stroke-width=\"3.5\"/></svg><span>Bedrud does the same for video: your server, your meetings.</span></li></ul></aside>",
+      "css": ".ds-key{max-width:27rem;padding:1.5rem 1.25rem 1.25rem;border:2px solid var(--ink);color:var(--ink)}.ds-key-title{width:fit-content;margin:calc(-1.5rem - .5em - 1px) 0 1rem;margin-inline-start:-.5rem;padding-inline:.5rem;background:var(--paper);font-family:var(--font-display);font-size:1.25rem;font-weight:800;line-height:1;text-transform:uppercase}.ds-key ul{display:grid;gap:.85rem;margin:0;padding:0;list-style:none;font-size:.9375rem;line-height:1.45}.ds-key li{display:grid;grid-template-columns:48px minmax(0,1fr);gap:.9rem;align-items:center}"
+    },
+    {
+      "name": "Envelope Back",
+      "kind": "custom",
+      "refersTo": "envelope-back",
+      "description": "Footer: the envelope turned over on a dark desk. Airmail-banded .sheet back, three flat clip-path folds, the return address on the flap ending with the motto.",
+      "html": "<div class=\"ds-desk\"><div class=\"ds-back\"><div class=\"ds-env\"><span class=\"ds-fold ds-fb\"></span><span class=\"ds-fold ds-ft\"></span><div class=\"ds-return\"><p class=\"ds-rt\">Return address</p><address><strong>TheMadOrg</strong><a href=\"#\" dir=\"ltr\">hello@themadorg.net</a><a href=\"#\" dir=\"ltr\">github.com/themadorg</a><span class=\"ds-motto\">We care about communication</span></address></div></div></div></div>",
+      "css": ".ds-desk{color-scheme:dark;padding:3rem;background:#0c0e12}.ds-back{max-width:40rem;padding:12px;background:#fff var(--airmail);background-size:40px 40px;rotate:-.8deg;color-scheme:light;color:#121418}.ds-env{--shoulder:18%;--tip:76%;position:relative;display:grid;justify-items:center;aspect-ratio:8/5;background:#dfe3e8}.ds-fold{position:absolute;inset:0}.ds-fb{background:#eceef1;clip-path:polygon(0 100%,50% 40%,100% 100%)}.ds-ft{background:#fff;clip-path:polygon(0 0,100% 0,100% var(--shoulder),50% var(--tip),0 var(--shoulder))}.ds-return{position:relative;align-self:start;display:grid;justify-items:center;padding:2rem 1rem 0;text-align:center}.ds-rt{margin:0;color:#d7262e;font-family:var(--font-display);font-size:1.25rem;font-weight:800;text-transform:uppercase}.ds-return address{display:grid;justify-items:center;gap:.3rem;margin-top:.7rem;font-style:normal;line-height:1.4}.ds-return a{font-weight:600;color:inherit;text-decoration-color:#d7262e;text-decoration-thickness:2px;text-underline-offset:.22em}.ds-motto{margin-top:.2rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Airmail",
+    "overview": "Chatmail is mail, so the site arrives as an airmail envelope. Every surface is a piece of postal paper: the envelope face framed by red-and-blue chevron bands, one perforated sheet of stamps (the four projects with a live site carry its screenshot, the rest carry an engraved two-colour vignette), an aerogramme edged with chevrons, CN 22 customs-declaration slips for the install commands, a route map with its key, a registered-mail slip for funders, and, to close the page, the back of the envelope with the return address on its flap. The postal vocabulary is the system, not ornament layered on a generic page; new surfaces should be another piece of mail (a slip, a label, a stamp, a form) before they are a card or a panel.\n\nThe material is flat paper and printed ink. Depth comes from paper tone steps (paper, paper-2, paper-3) and from things being stuck on slightly crooked (the hero stamp at 4deg, the PAR AVION label at -2deg, the registered slip at 1.5deg, the envelope back at -0.8deg), never from shadows at rest. Colour is postal: near-black ink on white or cool-grey paper, with airmail red as the brand voice and airmail blue as its second. Lettering borrows from stamps: heavy extra-condensed capitals for display, a warm humanist sans for reading.\n\nDensity is generous and editorial: a full-viewport envelope, wide section gaps, one reading column per section, each section composed on its own grid (see Layout). Every locale is first-class, including RTL Persian, and the whole site works offline as a WebXDC mini-app, so every font and image is self-hosted.",
+    "keyCharacteristics": [
+      "Postal-object vocabulary: envelope, stamp sheet, postmark, aerogramme, customs slip, route map, registered slip, return address.",
+      "Flat paper tone steps for depth; one shadow in the whole system, on the floating language menu.",
+      "Square corners everywhere; perforations and postal circles are the only non-rectilinear edges.",
+      "Red and blue airmail chevrons as the signature pattern.",
+      "Extra-condensed uppercase display, humanist sans text, Vazirmatn for Persian.",
+      "Strong ease-out motion, short durations, press feedback, hover only for fine pointers."
+    ],
+    "rules": [
+      {
+        "name": "The Dark-Desk Rule",
+        "body": "Dark mode darkens the desk, not the mail. The page ground, nav, section text, route map and stamp-sheet heading follow the theme; every postal object carries the global `.sheet` class, which sets `color-scheme: light` so every `light-dark()` token inside resolves to its light value, and maps `paper`/`paper-2`/`paper-3` onto the per-theme `sheet` steps and `red` onto `sheet-red`. The carriers are the envelope frame, the stamp-sheet selvage and each stamp's paper, the aerogramme, both CN 22 slips, the registered slip, the route's flying letter glyph and the envelope back in the footer; the standalone 404 slip follows the same rule with its own inline tokens. FAQ cards do the same by hand (`color-scheme: light; background: var(--sheet-2)`). The footer inverts the rule on purpose: it sets `color-scheme: dark` on a fixed `#0c0e12` desk in both themes, with the `.sheet` envelope back lying on it. Paper stays paper; it only dims a little at night.",
+        "section": "colors"
+      },
+      {
+        "name": "The Scheme-Fixed Field Rule",
+        "body": "Red and blue fields (the action button, the funding section, stamp faces, PAR AVION, the selvage colour checks) and the registered-mail slip keep the same colours in light and dark. They are printed matter, not themed UI.",
+        "section": "colors"
+      },
+      {
+        "name": "The Postal Pair Rule",
+        "body": "Red and blue are the only chromatic colours. Red leads (actions, labels, emphasis); blue seconds it (the airmail label, stamp faces, status). Nothing else is introduced, and no gradient ever blends them; they meet only as hard-edged chevron bands.",
+        "section": "colors"
+      },
+      {
+        "name": "The Condensed-First Persian Rule",
+        "body": "Under `:lang(fa)` the display stack is `'Sofia Sans Extra Condensed Variable', 'Vazirmatn Variable', Tahoma`. Sofia carries no Arabic-script glyphs, so Persian falls through to Vazirmatn per glyph while Latin brand names (Madmail, Delta Chat, TheMadOrg) keep the condensed display cut and still fit their stamps. Persian headings take line-height 1.25 and zero tracking; Persian body takes line-height 1.8; the return-address motto drops its tracking.",
+        "section": "typography"
+      },
+      {
+        "name": "The Em-Not-Ch Rule",
+        "body": "`ch` is measured on the Latin display face, far narrower than Persian letters, so any heading width set in `ch` is re-set in `em` under `:lang(fa)` (the hero h1 goes from 12ch to 8em).",
+        "section": "typography"
+      },
+      {
+        "name": "The Literal-Only Mono Rule",
+        "body": "The monospace stack is used only for literal install commands in the customs slip's Contents field (`dir=\"ltr\"`, `text-align: left`, one block per command line with a 2ch hanging indent so a soft-wrapped continuation never reads as a new command). It never sets labels, metadata, or UI.",
+        "section": "typography"
+      },
+      {
+        "name": "The Paper-Not-Light Rule",
+        "body": "No shadows at rest and no gradients anywhere. The one shadow belongs to a real floating overlay. If something needs to stand forward, step its paper tone or stick it on crooked.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Perforation Rule",
+        "body": "Perforation is a 10px dotted border in the colour of the ground beneath, carried as `--hole`, centred on the edge with a -5px inset. On the stamp sheet stamps butt together with no gap, so the perforation is the gutter: each stamp's `.paper::before` punches only its block-start row (`border-block-start`) and `.paper::after` only its inline-start column (`border-inline-start`), and the plate's own `::after` punches the outer block-end and inline-end edges. In a complete tiling every shared edge is the start edge of exactly one stamp, so each gutter carries exactly one row of holes. `--hole` is `paper-2`, the selvage's tone, so the holes read as punched through to the margin. The lone hero stamp on the envelope is perforated on all four sides by one `inset: -5px` dotted border in `paper`. Never draw perforation with images, masks, or radial gradients.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Chevron Rule",
+        "body": "The airmail band is the single `--airmail` SVG pattern, red `#d7262e` and blue `#1d3a8a` diagonals on paper, shown as a border by padding a paper object over the tile. It frames the envelope face, the envelope back and the 404 slip (40px tile), edges the aerogramme on all four sides (24px tile) and draws the route line (20px tile); the route key redraws it as polygons in its relay symbol. It is not used as a general divider.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "**Do** make every new surface a piece of mail: a slip, label, stamp, sheet or form, in paper and ink.",
+      "**Do** put the global `.sheet` class on every postal object so it stays light paper on a dark desk.",
+      "**Do** resolve themed colours through the `light-dark()` tokens and keep red and blue fields scheme-fixed.",
+      "**Do** set display type in Sofia Sans Extra Condensed, 800, uppercase, and keep Sofia first in the Persian display stack.",
+      "**Do** re-set any `ch` heading width in `em` under `:lang(fa)`.",
+      "**Do** perforate stamps on the sheet by their start edges only, in the `--hole` colour, and let the plate punch the outer end edges, so every gutter carries one row of holes.",
+      "**Do** let the return address and the postmark name what we make (Madmail, Bedrud, Madcore) and the org's motto.",
+      "**Do** use logical properties and flip directional glyphs under `:dir(rtl)`.",
+      "**Do** give every pressable element a press scale (0.94-0.985) and gate hover effects behind `(hover: hover) and (pointer: fine)`.",
+      "**Do** use `--ease-out` with `--dur-press` / `--dur-ui` / `--dur-enter`, and honour reduced motion.",
+      "**Do** self-host every font and image so the WebXDC build works offline."
+    ],
+    "donts": [
+      "**Don't** cast shadows at rest or use gradients; the language menu is the only shadow.",
+      "**Don't** round corners; radius is 0 except circles that are postal (postmark, route nodes and cancellations, registration targets).",
+      "**Don't** use monospace for anything but literal install commands.",
+      "**Don't** localise the postmark or flip it with `scale: -1 1`; it is Latin and LTR everywhere, mirrored only by moving its ring.",
+      "**Don't** repeat a project's name on its stamp face; the stamp's h3 carries it.",
+      "**Don't** add colours beyond paper, ink, airmail red and airmail blue.",
+      "**Don't** add a generic scroll reveal; entrances belong to a postal object, and entrance states apply only under `html.js`.",
+      "**Don't** load fonts or images from the network."
+    ]
+  }
+}

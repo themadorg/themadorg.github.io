@@ -2,14 +2,17 @@
 <html lang="en" dir="ltr">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="text-scale" content="scale" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+		<meta name="color-scheme" content="light dark" />
 		<script>
-			try {
-				if (localStorage.getItem('madorg-light') === 'true') {
-					document.documentElement.dataset.light = '';
-				}
-			} catch (_) {}
+			(function () {
+				var d = document.documentElement;
+				d.classList.add('js');
+				try {
+					var t = localStorage.getItem('madorg-theme');
+					if (t === 'light' || t === 'dark') d.dataset.theme = t;
+				} catch (_) {}
+			})();
 		</script>
 		%sveltekit.head%
 	</head>
